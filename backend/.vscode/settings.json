@@ -1,0 +1,8 @@
+{
+    "editor.inlineSuggest.enabled": false,
+    "antigravity.inlineCompletions.enabled": false,
+    "github.copilot.inlineSuggest.enable": false,
+    "github.copilot.enable": {
+        "*": false
+    }
+}
