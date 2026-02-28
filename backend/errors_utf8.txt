@@ -1,0 +1,2 @@
+﻿src/middlewares/error.middleware.ts(2,26): error TS2307: Cannot find module '../utils/apiError' or its corresponding type declarations.
+src/modules/content-type/contentType.service.ts(2,26): error TS2307: Cannot find module '../../utils/apiError' or its corresponding type declarations.
