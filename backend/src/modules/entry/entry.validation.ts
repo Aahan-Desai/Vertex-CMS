@@ -95,7 +95,8 @@ const validators: Record<string, ValidatorFunction> = {
 
 export const validateEntry = (
   entryData: Record<string, any>,
-  fields: Field[]
+  fields: Field[],
+  mode: "create" | "update" = "create"
 ): string[] | null => {
   const errors: string[] = [];
 
@@ -110,7 +111,11 @@ export const validateEntry = (
   for (const field of fields) {
     const value = entryData[field.slug];
 
-    if (field.is_required && value === undefined) {
+    if (
+      mode === "create" &&
+      field.is_required &&
+      value === undefined
+    ) {
       errors.push(`${field.slug} is required`);
       continue;
     }
