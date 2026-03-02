@@ -53,7 +53,7 @@ export const getEntriesHandler = async (
 
     const contentTypeId = contentTypeResult.rows[0].id;
 
-    const entries = await getEntries(contentTypeId);
+    const entries = await getEntries(contentTypeId, req.query);
 
     res.status(200).json({
       success: true,
